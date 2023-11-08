@@ -1,0 +1,35 @@
+h2{
+    color: green;
+}
+h1{
+  color: red;
+}
+.artistasDestacados{
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+body{
+    background-image: url("../img/fondo.jpg");
+}
+.navbar-custom {
+    color: white; /* Cambia el color del texto a blanco */
+    margin-right: 20px;
+}
+.custom-logo {
+    color: white; /* Cambia #FF0000 al color que desees (por ejemplo, rojo) */
+}
+.navbar-light .navbar-brand {
+   color: white;
+}
+
+.resultadoH1{
+    color: black;
+    font-size: 3em;
+    text-align: center;
+}
+
+.resultadoP{
+    font-size: 2em;
+    text-align: center;
+}

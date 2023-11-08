@@ -1,35 +1,65 @@
-h2{
-    color: green;
-}
-h1{
-  color: red;
-}
-.artistasDestacados{
-    margin-top: 40px;
-    padding-bottom: 50px;
-}
-
 body{
     background-image: url("../img/fondo.jpg");
 }
-.navbar-custom {
-    color: white; /* Cambia el color del texto a blanco */
-    margin-right: 20px;
-}
-.custom-logo {
-    color: white; /* Cambia #FF0000 al color que desees (por ejemplo, rojo) */
-}
-.navbar-light .navbar-brand {
-   color: white;
+
+h1 {
+    color: #3498db;
+    font-size: 2.5em;
 }
 
-.resultadoH1{
-    color: black;
-    font-size: 3em;
-    text-align: center;
-}
-
-.resultadoP{
+h2 {
+    color: #3498db;
     font-size: 2em;
+}
+
+
+.tit {
+    color: #3498db;
+    font-size: 1.8em;
+}
+
+
+.artistasDestacados {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-custom {
+    color: white;
+    margin-right: 10px;
+}
+
+.custom-logo {
+    color: #3498db;
+}
+
+.navbar-light .navbar-brand {
+    color: #3498db;
+}
+
+.resultadoH1 {
+    color: #333;
+    font-size: 2.5em;
     text-align: center;
 }
+
+.resultadoP {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+h1, h2, .tit, .resultadoH1, .resultadoP {
+    transition: color 0.3s ease-in-out;
+}
+
+
+h1:hover, h2:hover, .tit:hover, .resultadoH1:hover, .resultadoP:hover {
+    color: #3498db;
+}
+

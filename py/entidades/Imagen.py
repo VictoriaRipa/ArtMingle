@@ -1,13 +1,16 @@
 import os
 
-class Imagen:
+import os
 
+class Imagen:
     ruta = "static/uploads"
 
-    def contar_archivos_en_carpeta(self,ruta):
+    def obtener_ultimas_imagenes(self):
+        ruta = self.ruta
         if os.path.exists(ruta) and os.path.isdir(ruta):
             archivos = os.listdir(ruta)
+            archivos = sorted(archivos, key=lambda x: os.path.getctime(os.path.join(ruta, x)), reverse=True)
             cantidad_de_archivos = len(archivos)
-            return "La cantidad de Imagenes disponibles son " + str(cantidad_de_archivos)
+            return archivos, cantidad_de_archivos
         else:
-            return "todavia no hay imagenes cargadas"
+            return [], 0

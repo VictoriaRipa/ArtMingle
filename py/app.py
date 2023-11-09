@@ -9,11 +9,9 @@ app = Flask(__name__)
 # Ruta para mostrar el formulario de carga
 @app.route('/')
 def index():
-
-    image_folder = "static/uploads"
-    image_files = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
-
-    return render_template('index.html',image_files=image_files)
+    img = Imagen()
+    image_files, cantidadImg = img.obtener_ultimas_imagenes()
+    return render_template('index.html', image_files=image_files, cantidadImg=cantidadImg)
 
 
 @app.route('/upload')
@@ -42,13 +40,13 @@ def upload_image():
 # Ruta para ver las imágenes que hay
 @app.route('/mostrar')
 def mostrar_publicaciones():
-    img=Imagen()
-    cantidadImg=img.contar_archivos_en_carpeta("static/uploads")
+    img = Imagen()
+    image_files, cantidadImg = img.obtener_ultimas_imagenes()
+    return render_template('mostrarImgs.html', cantidadImg=cantidadImg, image_files=image_files)
     # Obtén la lista de nombres de archivo de las imágenes en la carpeta "uploads"
     image_folder = "static/uploads"
     image_files = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
     # Renderiza la plantilla HTML y pasa la lista de nombres de archivo
-    return render_template('mostrarImgs.html',cantidadImg=cantidadImg,image_files=image_files)
 
 
 
